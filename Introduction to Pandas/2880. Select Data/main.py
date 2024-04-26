@@ -1,8 +1,9 @@
 import pandas as pd
-from typing import List
-    
+
+
 def selectData(students: pd.DataFrame) -> pd.DataFrame:
     return students.loc[students['student_id'] == 101, students.columns[1:]]
+
 
 def main():
     dados = {
@@ -12,6 +13,7 @@ def main():
     }
     student_data = pd.DataFrame(dados)
     print(selectData(student_data))
-    
-if __name__=="__main__":
+
+
+if __name__ == "__main__":
     main()

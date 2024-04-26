@@ -1,9 +1,10 @@
 import pandas as pd
-from typing import List
-    
+
+
 def dropMissingData(students: pd.DataFrame) -> pd.DataFrame:
     students = students.dropna(subset=['name'])
     return students
+
 
 def main():
     data = {
@@ -13,6 +14,7 @@ def main():
     }
     df = pd.DataFrame(data)
     print(dropMissingData(df))
-    
-if __name__=="__main__":
+
+
+if __name__ == "__main__":
     main()

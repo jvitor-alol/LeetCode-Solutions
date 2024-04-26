@@ -1,9 +1,10 @@
 import pandas as pd
-from typing import List
-    
+
+
 def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
     employees['bonus'] = employees['salary'] * 2
     return employees
+
 
 def main():
     dados = {
@@ -12,6 +13,7 @@ def main():
     }
     df = pd.DataFrame(dados)
     print(createBonusColumn(df))
-    
-if __name__=="__main__":
+
+
+if __name__ == "__main__":
     main()
